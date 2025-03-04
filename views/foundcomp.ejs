@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Found Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: lavender;
+        }
+
+        #search {
+
+            height: 28px;
+            position: relative;
+            top: -38px;
+            left: 1300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>Found Data</h2>
+    <table>
+        <tr>
+            <th>company_name</th>
+            <th>job_role</th>
+            <th>position</th>
+            <th>package</th>
+            <th>qualifications</th>
+            <th>job_description</th>
+
+        </tr>
+        <% data.forEach(user=> { %>
+            <tr>
+                <td>
+                    <%= user.company_name %>
+                </td>
+                <td>
+                    <%= user.job_role %>
+                </td>
+                <td>
+                    <%= user.position %>
+                </td>
+                <td>
+                    <%= user.package %>
+                </td>
+                <td>
+                    <%= user.qualifications %>
+                </td>
+                <td>
+                    <%= user.job_description %>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+</body>
+
+</html>

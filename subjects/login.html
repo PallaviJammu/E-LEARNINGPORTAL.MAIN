@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+	<title>Login SignUp</title>
+	<link rel="stylesheet" type="text/css" href="loginStyle.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- It will redirect to the Home Page after submitting the form -->
+  
+</head>
+<body>
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: #fff;">Log In</button>
+				<button type="button" class="toggle-btn" id="reg" onclick="register()">Register</button>
+			</div>
+			
+			
+			<!-- Login Form -->
+			<form id="login" method="post" class="input-group" action="http://localhost:1111/login">
+				<div class="inp">
+					<img src="images/icon/user.png"><input type="text" id="name" id="email" class="input-field" name="username"placeholder="Username" style="width: 88%; border:none;" required="required">
+				</div>
+				<div class="inp">
+					<img src="images/icon/password.png"><input type="password" id="password" name="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
+				</div>
+				<input type="checkbox" class="check-box">Remember Password
+				<button type="submit" class="submit-btn" onclick="name()">Log In</button>
+			</form>
+
+
+		
+			
+			<!-- Registration Form -->
+			<form id="register" method="post" class="input-group" action="http://localhost:1111/register">
+				<input type="text" class="input-field" placeholder="Full Name" name="username" required="required">
+				<input type="email" class="input-field" placeholder="Email Address" name="email" required="required">
+				<input type="password" class="input-field" placeholder="Create Password"  name="password" required="required">
+				<input type="password" class="input-field" placeholder="Confirm Password"  required="required">
+				<input type="checkbox" class="check-box" id="chkAgree" onclick="goFurther()">I agree to the Terms & Conditions
+				<button type="submit"  class="submit-btn ">Register</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+		<script>
+
+			$(document).ready(function(){
+				$("form").submit(function(){
+					const user=document.getElementById("name").value;
+					alert(`Welcome To Our E-Learning Portal ${user}`);
+				});
+			});
+		</script>
+</body>
+
+</html>
