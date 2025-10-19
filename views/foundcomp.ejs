@@ -44,6 +44,7 @@
             <th>package</th>
             <th>qualifications</th>
             <th>job_description</th>
+            <th>skillset</th>
 
         </tr>
         <% data.forEach(user=> { %>
@@ -65,6 +66,9 @@
                 </td>
                 <td>
                     <%= user.job_description %>
+                </td>
+                <td>
+                    <%= user.skillset %>
                 </td>
             </tr>
             <% }) %>
