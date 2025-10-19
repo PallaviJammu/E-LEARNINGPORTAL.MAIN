@@ -1,4 +1,6 @@
 # E-LearningPortal
+<img width="1920" height="1020" alt="Screenshot 2025-10-19 202033" src="https://github.com/user-attachments/assets/e89fd1c3-3e94-4c55-a2b1-3cd7fa9470c5" />
+
 
 <img width="1440" alt="image" src="https://github.com/user-attachments/assets/4d473589-9e18-49aa-8128-e7b25f067a0b" />
 
