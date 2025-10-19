@@ -12,7 +12,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/elearnDB")
 app.use(express.urlencoded({ extended: true }));
 
 // ✅ Serve all static frontend files (HTML, CSS, JS)
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(path.join(__dirname, 'subjects')));
 
 // ✅ Optional: also serve subjects folder (CSS/images inside it)
 app.use("/subjects", express.static(path.join(__dirname, "subjects")));
@@ -35,7 +35,7 @@ const Company = mongoose.model("Companie", companySchema);
 
 // ✅ Default route — load homepage
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname,'subjects',  "index.html"));
 });
 
 // Register route
